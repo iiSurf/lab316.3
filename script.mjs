@@ -74,3 +74,15 @@ subMenuEl.style.top = `0px`;
 
 // TODO: Part 4
 
+// Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks.
+document.getElementById(`a`);
+
+// Attach a delegated 'click' event listener to topMenuEl.
+
+// The first line of code of the event listener function should call the event object's preventDefault() method.
+
+// The second line of code of the function should immediately return if the element clicked was not an <a> element.
+
+// Log the content of the <a> to verify the handler is working.
+
+// topMenuEl.getElementsByTagName(`top-menu`)
