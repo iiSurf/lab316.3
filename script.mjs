@@ -20,11 +20,22 @@ let aTag = document.querySelector('a');
 let aParent = document.getElementById('header');
 
 var menuLinks = [
-    { text: 'about', href: './about' },
-    { text: 'catalog', href: './catalog' },
-    { text: 'orders', href: './orders' },
-    { text: 'account', href: './account' },
-];
+    {text: 'about', href: '/about'},
+    {text: 'catalog', href: '#', subLinks: [
+      {text: 'all', href: '/catalog/all'},
+      {text: 'top selling', href: '/catalog/top'},
+      {text: 'search', href: '/catalog/search'},
+    ]},
+    {text: 'orders', href: '#' , subLinks: [
+      {text: 'new', href: '/orders/new'},
+      {text: 'pending', href: '/orders/pending'},
+      {text: 'history', href: '/orders/history'},
+    ]},
+    {text: 'account', href: '#', subLinks: [
+      {text: 'profile', href: '/account/profile'},
+      {text: 'sign out', href: '/account/signout'},
+    ]},
+  ];
 
 menuLinks.forEach((link)=> {
     let newLink = document.createElement(`a`);
@@ -51,15 +62,15 @@ subMenuEl.style.backgroundColor = `var(--sub-menu-bg)`;
 
 // Add the class of flex-around to the subMenuEl element.
 
-subMenuEl.className(`flex-around`);
+subMenuEl.classList.add(`flex-around`);
 
 // Set the CSS position property of subMenuEl to the value of absolute.
 
-subMenuEl.style = `position: absolute`;
+subMenuEl.style.position = `absolute`;
 
 // Set the CSS top property of subMenuEl to the value of 0.
 
-
+subMenuEl.style.top = `0px`;
 
 // TODO: Part 4
 
